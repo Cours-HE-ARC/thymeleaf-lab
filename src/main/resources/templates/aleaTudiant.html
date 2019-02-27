@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head th:insert="fragments/fragments.html :: header"/>
+	
+	<body>
+			
+		<div th:replace="fragments/fragments.html :: navigation"></div>
+		
+		<div class="container">
+			<div class="jumbotron">
+			  <h1 class="display-4">AleaTudiant</h1>
+			  <p class="lead">Choix aléatoire d'étudiant....</p>
+			  <hr class="my-4">
+			  
+			  <h3 class="display-12" id="win_label" style="text-align:center">And the winner is...</h3>
+			  <h2 class="display-4" style="text-align:center" id="etudiant"></h2>
+			  
+			  <button type="button"  class="btn btn-primary btn-block btn-lg" id="startButton">Start</button>
+			</div>
+			
+		</div>
+		
+		<div th:replace="fragments/fragments.html :: scripts"></div>
+		<script type="text/javascript" src="js/aleatudiant.js"></script>
+	</body>
+</html>
