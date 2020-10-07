@@ -5,22 +5,26 @@
 var $etudiant;
 var $winLabel;
 
-var liste = ['Kim Bulloni', 
-	'Paul Arzul',
-	'Lucas Bulloni',
-	'Malik Fleury',
-	'Sergiy Goloviatinski',
-	'Thibault Haldenwang',
-	'Charles-Lewis Jaggi',
-	'Steven Jeanneret',
-	'Raphaël Margueron',
-	'Mateo Martinez',
-	'Quentin Michel',
-	'Fabien Mottier',
-	'Damian Petroff',
-	'Segan Salomon',
-	'Luca Srdjenovic',
-	'Bastien Wermeille'];
+
+
+var liste = [
+'Alfred Robin',
+'Bürki Pierre',
+'Chappuis Julien',
+'Da Silva David',
+'Jeanneret Loïck',
+'Jeannet Nino',
+'Laipe Kevin',
+'Latino	Nathan',
+'Leuba John',
+'Peiris Sébastien',
+'Rihs David',
+'Rosca Sol',
+'Schaffner Téo',
+'Seuret	Tristan',
+'Vallat	Jonas',
+'Loison	Yohan',
+'Bueche Erwan']
 
 $(function () {
 	$etudiant = $('#etudiant');

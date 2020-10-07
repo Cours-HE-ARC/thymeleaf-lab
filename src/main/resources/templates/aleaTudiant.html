@@ -7,6 +7,17 @@
 			
 		<div th:replace="fragments/fragments.html :: navigation"></div>
 		
+		<!--  **************** logout ****************** -->
+<div th:fragment="logout" class="logout" sec:authorize="isAuthenticated()"> 
+            Utilisateur: <span sec:authentication="name">[]</span>
+            Roles: <span sec:authentication="principal.authorities"></span> 
+    <div>
+        <form action="#" th:action="@{/logout}" method="post"> 
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+</div>
+		
 		<div class="container">
 			<div class="jumbotron">
 			  <h1 class="display-4">AleaTudiant</h1>
