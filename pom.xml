@@ -69,6 +69,8 @@
 
 <!-- SECU !-->
 	<!--  spring security !-->
+	
+	
 	<dependency>
 	<groupId>org.springframework.security</groupId>
 	<artifactId>spring-security-web</artifactId>
@@ -83,6 +85,7 @@
 	  <groupId>org.thymeleaf.extras</groupId>
 	  <artifactId>thymeleaf-extras-springsecurity5</artifactId>
 	</dependency>
+	
 	
 
 	

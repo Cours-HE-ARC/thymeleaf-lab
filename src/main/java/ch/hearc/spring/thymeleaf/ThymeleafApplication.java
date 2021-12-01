@@ -9,14 +9,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import ch.hearc.spring.thymeleaf.data.EtudiantsDAO;
+/*
 import ch.hearc.spring.thymeleaf.model.Role;
 import ch.hearc.spring.thymeleaf.model.RoleRepository;
 import ch.hearc.spring.thymeleaf.model.Utilisateur;
 import ch.hearc.spring.thymeleaf.model.UtilisateurRepository;
-
+*/
+import ch.hearc.spring.thymeleaf.model.Role;
+import ch.hearc.spring.thymeleaf.model.Utilisateur;
+import ch.hearc.spring.thymeleaf.repo.RoleRepository;
+import ch.hearc.spring.thymeleaf.repo.UtilisateurRepository;
 @SpringBootApplication
 public class ThymeleafApplication {
 
@@ -24,6 +31,9 @@ public class ThymeleafApplication {
 	RoleRepository roleRepo;
 	@Autowired
 	UtilisateurRepository utilisateurRepo;
+	@Autowired
+	UserDetailsService userDetailsService;
+	
 	
 	@Autowired
 	BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -43,6 +53,11 @@ public class ThymeleafApplication {
 		return new EtudiantsDAO();
 	}
 	
+	 @Autowired
+	    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+	      auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+	   }
+	 
 	@PostConstruct
 	public void initData() {
 	  //Création du role admin
@@ -61,4 +76,5 @@ public class ThymeleafApplication {
 	  u.setRoles(roles);
 	  utilisateurRepo.save(u);
 	}
+	
 }

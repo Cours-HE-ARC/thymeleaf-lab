@@ -8,23 +8,22 @@ var $winLabel;
 
 
 var liste = [
-'Alfred Robin',
-'Bürki Pierre',
-'Chappuis Julien',
-'Da Silva David',
-'Jeanneret Loïck',
-'Jeannet Nino',
-'Laipe Kevin',
-'Latino	Nathan',
-'Leuba John',
-'Peiris Sébastien',
-'Rihs David',
-'Rosca Sol',
-'Schaffner Téo',
-'Seuret	Tristan',
-'Vallat	Jonas',
-'Loison	Yohan',
-'Bueche Erwan']
+'Barbot Mathieu',
+'Boegli Lenny',
+'Campana Luca',
+'Costa Bruno',
+'Faivre Corentin',
+'Ferro Massimo',
+'Flück Thierry',
+'Frossard Loïc',
+'Girardin Jarod',
+'Izzo Valentino',
+'Lopes da Silva Diogo',
+'Meyer Luca Davide',
+'Montavon Alexia',
+'Muller Leon',
+'Tripiciano Tania',
+'Wermeille Thibault']
 
 $(function () {
 	$etudiant = $('#etudiant');
