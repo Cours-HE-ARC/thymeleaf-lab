@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import ch.hearc.spring.thymeleaf.data.BieresDAO;
 import ch.hearc.spring.thymeleaf.data.EtudiantsDAO;
 /*
 import ch.hearc.spring.thymeleaf.model.Role;
@@ -51,6 +52,11 @@ public class ThymeleafApplication {
 	@Bean
 	public EtudiantsDAO etudiantsDAO () {
 		return new EtudiantsDAO();
+	}
+	
+	@Bean
+	public BieresDAO bieresDAO () {
+		return new BieresDAO();
 	}
 	
 	 @Autowired

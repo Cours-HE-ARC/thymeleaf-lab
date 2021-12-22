@@ -47,7 +47,7 @@ $(function () {
 var testIntervall = function () {
 	
 	let el = generateHugeListForIteration();
-	var randomPick = Math.floor(Math.random() * (80 - 1 + 1) + 1);
+	var randomPick = Math.floor(Math.random() * 80 + 1);
 	var count = 0;
 	
 	let interval = setInterval(gen => {
